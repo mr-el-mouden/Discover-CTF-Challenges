@@ -1,0 +1,7 @@
+services:
+  simple-ssh-ctf:
+    build: .
+    container_name: simple-ssh-ctf
+    ports:
+      - "2222:22"
+    restart: unless-stopped
