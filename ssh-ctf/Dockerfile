@@ -41,7 +41,7 @@ RUN echo 'FST{fake_flag_hahahaha}' > /home/guest/flag.txt \
 # Create root flag
 ARG ROOT_FLAG="FST{default_root_flag}"
 
-RUN echo "$ROOT_FLAG" > /root/root_flag.txt \
+RUN echo "ICODE{root_flag_751938413}" > /root/root_flag.txt \
     && chmod 600 /root/root_flag.txt
 
 # Create vulnerable backup script

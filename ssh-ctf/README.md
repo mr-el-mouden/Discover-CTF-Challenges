@@ -25,20 +25,28 @@ Password: guest@222
 SSH port: 2222
 
 
-## Lancer le challenge
+## Creer l contenair dans le repertoire ssh-ctf
 
-```bash
-docker build --build-arg ROOT_FLAG="ICODE{flag}" -t backup_ssh_player_1
-```
+cd ssh-ctf
+docker build -t backup-ctf .
+
+## Verification dial contenair
+
+docker images
+
+ghadi del9a wahid container isma backup-ctf
+
+
+## Lancer le contenair avec le port ssh f 2222
+
+docker run -d -p 2222:22 --name backup-ctf-machine backup-ctf
+
 
 ## Connexion SSH
 
 Dans un autre terminal :
 
 ```bash
-ssh ctfuser@localhost -p 2222
+ssh guest@localhost -p 2222
+password : guest@222
 ```
-
-## Run The Instance
-
-docker run -d -p 2222:22 --name player1 backup-ssh-player_1
